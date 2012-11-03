@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="contextitem.test1"
+       name="ContextItem Test 1"
+       version="1.0.0"
+       provider-name="Fice">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.context" library="addon.py">
+      <label>Test 1 (always visible)</label>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Testcase 1 for Context Item Addons</summary>
+    <description>This addon tests the following features:
+    - An context item should always be visible when there is no visibility expression
+    - Display the string given in extension point
+    </description>
+  </extension>
+</addon>
+
+<addon id="contextitem.test2"
+       name="ContextItem Test 2"
+       version="1.0.0"
+       provider-name="Fice">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.context" library="addon.py" visible="Player.HasAudio">
+      <label>Test 2 (Visible when DVD inserted)</label>
+      <label lang="de">Test 2 (Sichtbar wenn DVD eingelegt)</label>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Testcase 2 for Context Item Addons</summary>
+    <description>
+    </description>
+  </extension>
+</addon>
+
+<addon id="contextitem.test3"
+       name="ContextItem Test 3"
+       version="1.0.0"
+       provider-name="Fice">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.context" library="addon.py" visible="true">
+      <label>Test 3 (Always visible)</label>
+      <label lang="de">Test 3 (Immer sichtbar)</label>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Testcase 3 for Context Item Addons</summary>
+    <description>
+    </description>
+  </extension>
+</addon>
+
+<addon id="contextitem.test4"
+       name="ContextItem Test 4"
+       version="1.0.0"
+       provider-name="Fice">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.context" library="addon.py" visible="false">
+      <label>Test 4 (Never visible)</label>
+      <label lang="de">Test 4 (Nie sichtbar)</label>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Testcase 4 for Context Item Addons</summary>
+    <description>
+    </description>
+  </extension>
+</addon>
+
+<addon id="contextitem.test5"
+       name="ContextItem Test 5"
+       version="1.0.0"
+       provider-name="Fice">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.context" library="addon.py" visible="addon.hassetting(enable_this_item)">
+      <label>Test 5 (Activated via setting)</label>
+      <label lang="de">Test 5 (Über Einstellungen aktivierbar)</label>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Testcase 5 for Context Item Addons</summary>
+    <description>
+    </description>
+  </extension>
+</addon>
+</addons>
